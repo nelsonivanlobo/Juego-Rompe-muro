@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rompe muros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars-container" id="stars"></div>
+
+  <header>
+    <h1>ROMPIENDO MUROS DE CÓDIGO</h1>
+    <p>¡Contesta correctamente para romper los ladrillos!</p>
+  </header>
+
+  <div class="game-container">
+    <div class="walls-container">
+      <div class="wall">
+        <h2 class="wall-title basic-title">BÁSICO</h2>
+        <div class="bricks" id="basic-wall">
+          <div class="brick basic-brick" data-id="1"></div>
+          <div class="brick basic-brick" data-id="2"></div>
+          <div class="brick basic-brick" data-id="3"></div>
+          <div class="brick basic-brick" data-id="4"></div>
+          <div class="brick basic-brick" data-id="5"></div>
+          <div class="brick basic-brick" data-id="6"></div>
+          <div class="brick basic-brick" data-id="7"></div>
+          <div class="brick basic-brick" data-id="8"></div>
+          <div class="brick basic-brick" data-id="9"></div>
+          <div class="brick basic-brick" data-id="10"></div>
+        </div>
+      </div>
+
+      <div class="wall">
+        <h2 class="wall-title intermediate-title">INTERMEDIO</h2>
+        <div class="bricks" id="intermediate-wall">
+          <div class="brick intermediate-brick" data-id="1"></div>
+          <div class="brick intermediate-brick" data-id="2"></div>
+          <div class="brick intermediate-brick" data-id="3"></div>
+          <div class="brick intermediate-brick" data-id="4"></div>
+          <div class="brick intermediate-brick" data-id="5"></div>
+          <div class="brick intermediate-brick" data-id="6"></div>
+          <div class="brick intermediate-brick" data-id="7"></div>
+          <div class="brick intermediate-brick" data-id="8"></div>
+          <div class="brick intermediate-brick" data-id="9"></div>
+          <div class="brick intermediate-brick" data-id="10"></div>
+        </div>
+      </div>
+
+      <div class="wall">
+        <h2 class="wall-title advanced-title">AVANZADO</h2>
+        <div class="bricks" id="advanced-wall">
+          <div class="brick advanced-brick" data-id="1"></div>
+          <div class="brick advanced-brick" data-id="2"></div>
+          <div class="brick advanced-brick" data-id="3"></div>
+          <div class="brick advanced-brick" data-id="4"></div>
+          <div class="brick advanced-brick" data-id="5"></div>
+          <div class="brick advanced-brick" data-id="6"></div>
+          <div class="brick advanced-brick" data-id="7"></div>
+          <div class="brick advanced-brick" data-id="8"></div>
+          <div class="brick advanced-brick" data-id="9"></div>
+          <div class="brick advanced-brick" data-id="10"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="question-container" id="question-container">
+      <div class="question-level" id="question-level">NIVEL: BÁSICO</div>
+      <div class="question-text" id="question-text">¿Pregunta de programación?</div>
+    </div>
+
+    <div class="controls">
+      <button class="start-btn" id="start-btn">INICIAR JUEGO</button>
+    </div>
+  </div>
+
+  <div class="winner-message" id="winner-message">
+    <div class="winner-content">
+      <h2 class="winner-title">¡FELICIDADES!</h2>
+      <p class="winner-text">Has derribado todos los muros de código.<br>¡Eres un maestro programador!</p>
+      <button class="restart-btn" id="restart-btn">JUGAR DE NUEVO</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
