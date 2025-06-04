@@ -225,6 +225,11 @@
       transform: scale(1.05);
     }
 
+    .footer{
+      font-size: 10px;
+      margin-top: 50px;
+    }
+
     @keyframes glow {
       from {
         text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
