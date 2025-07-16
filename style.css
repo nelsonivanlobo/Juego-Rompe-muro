@@ -1,3 +1,4 @@
+/* Utilización de variables */
 :root {
       --neon-blue: #00f3ff;
       --neon-pink: #ff00ff;
@@ -129,6 +130,40 @@
     .controls {
       margin-top: 20px;
     }
+
+
+
+.input{
+  margin-bottom: 10px;
+}
+
+.botonOk{
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: black;
+  height: 30px;
+  width: 70px;
+  }
+
+ .botonOk:hover{
+    background-color: #00f2ffba;
+    color: white;
+  }
+
+  .botonExit{
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  color: black;
+  height: 30px;
+  width: 70px;
+  }
+
+  .botonExit:hover{
+    background-color: #d35018ba;
+    color: white;
+  }
+
+    
 
     .start-btn {
       background: transparent;

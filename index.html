@@ -17,6 +17,8 @@
     <p>¡Contesta correctamente para romper los ladrillos!</p>
   </header>
 
+<!-- Muro de ladrillos (bricks) -->
+  <!-- Básico -->
   <div class="game-container">
     <div class="walls-container">
       <div class="wall">
@@ -35,6 +37,7 @@
         </div>
       </div>
 
+  <!-- Intermedio -->
       <div class="wall">
         <h2 class="wall-title intermediate-title">INTERMEDIO</h2>
         <div class="bricks" id="intermediate-wall">
@@ -51,6 +54,7 @@
         </div>
       </div>
 
+  <!-- Avanzado -->
       <div class="wall">
         <h2 class="wall-title advanced-title">AVANZADO</h2>
         <div class="bricks" id="advanced-wall">
@@ -67,17 +71,24 @@
         </div>
       </div>
     </div>
+<!--  -->
 
-    <div class="question-container" id="question-container">
-      <div class="question-level" id="question-level">NIVEL: BÁSICO</div>
-      <div class="question-text" id="question-text">¿Pregunta de programación?</div>
-    </div>
+<div class="question-container" id="question-container" style="display: none;">
+  <div class="question-level" id="question-level">NIVEL: AVANZADO</div>
+  <div class="question-text" id="question-text">¿Pregunta?</div>
+  <div class="content-options" id="options-container">
+    <!-- Opciones generadas dinámicamente -->
+  </div>
+  <button class="botonOk" onclick="verificarRespuesta()">OK</button>
+  <button class="botonExit" onclick="salir()">SALIR</button>
+</div>
 
     <div class="controls">
       <button class="start-btn" id="start-btn">INICIAR JUEGO</button>
     </div>
   </div>
 
+<!-- Mensaje al Ganador -->
   <div class="winner-message" id="winner-message">
     <div class="winner-content">
       <h2 class="winner-title">¡FELICIDADES!</h2>
@@ -85,6 +96,7 @@
       <button class="restart-btn" id="restart-btn">JUGAR DE NUEVO</button>
     </div>
   </div>
+<!--  -->
   <footer>
     <p class="footer">&#169; 2025 {Lweb} Todos los derechos reservados.</p>
   </footer>
