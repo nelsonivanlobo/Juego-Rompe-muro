@@ -378,21 +378,26 @@ function verificarRespuesta() {
   const selectedOption = document.querySelector('input[name="option"]:checked');
 
   if (!selectedOption) {
-    alert('Seleccioná una opción antes de continuar.');
+    alertify.alert('Atención', 'Seleccioná una opción antes de continuar.');
     return;
   }
 
   const selectedIndex = parseInt(selectedOption.value);
 
   if (selectedIndex === currentQuestion.correctIndex) {
-    // Aquí puedes agregar efectos de sonido si tienes definidos sounds.correct.play()
-    alert('¡Respuesta correcta! ¡Un ladrillo menos!');
-    breakBrick();
-  } else {
-    alert(`Respuesta incorrecta. La respuesta correcta era: ${currentQuestion.options[currentQuestion.correctIndex]}`);
+    alertify.success('¡Respuesta correcta! ¡Un ladrillo menos!').dismissOthers().delay(1000);
+    breakBrick();}
+  else {
+     alertify.error('Respuesta incorrecta.')
+      .dismissOthers().delay(2000);
   }
 
-  // Mostrar la siguiente pregunta o el mensaje final
+  /* 
+  alertify.error(`Respuesta incorrecta. La respuesta correcta era: ${currentQuestion.options[currentQuestion.correctIndex]}`)
+      .dismissOthers().delay(2000);
+  */
+
+  // Mostrar el mensaje final
   if (!checkGameCompletion()) {
     showQuestion();
   }
