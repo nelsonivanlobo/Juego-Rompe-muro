@@ -373,7 +373,7 @@ function showQuestion() {
   questionContainer.style.display = 'block';
 }
 
-// Función para verificar respuesta al presionar el botón Verificar
+
 function verificarRespuesta() {
   const selectedOption = document.querySelector('input[name="option"]:checked');
 
@@ -385,21 +385,28 @@ function verificarRespuesta() {
   const selectedIndex = parseInt(selectedOption.value);
 
   if (selectedIndex === currentQuestion.correctIndex) {
-    alertify.success('¡Respuesta correcta! ¡Un ladrillo menos!').dismissOthers().delay(1000);
-    breakBrick();}
-  else {
-     alertify.error('Respuesta incorrecta.')
-      .dismissOthers().delay(2000);
-  }
+    alertify.success('¡Respuesta correcta! ¡Un ladrillo menos!')
+      .dismissOthers()
+      .delay(1000);
+    
+    breakBrick();
 
-  /* 
-  alertify.error(`Respuesta incorrecta. La respuesta correcta era: ${currentQuestion.options[currentQuestion.correctIndex]}`)
-      .dismissOthers().delay(2000);
-  */
+    // Solo si el juego no terminó, mostrar siguiente pregunta
+    if (!checkGameCompletion()) {
+      showQuestion();
+    }
 
-  // Mostrar el mensaje final
-  if (!checkGameCompletion()) {
-    showQuestion();
+  } else {
+    alertify.error('Respuesta incorrecta. Volviendo a empezar...')
+      .dismissOthers()
+      .delay(2000);
+
+    // Detener ejecución y recargar después de 2 segundos
+    setTimeout(() => {
+      location.reload();
+    }, 2000);
+
+    return; // 👈 Evita que siga ejecutando el resto de la función
   }
 }
 
