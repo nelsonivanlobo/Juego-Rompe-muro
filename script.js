@@ -345,7 +345,7 @@ function showQuestion() {
     const label = document.createElement('label');
     label.innerHTML = `
       <input class="input" type="radio" name="option" value="${index}" />
-      ${option}
+      ${option}<br>
     `;
     optionsContainer.appendChild(label);
     optionsContainer.appendChild(document.createElement('br'));

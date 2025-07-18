@@ -12,7 +12,8 @@
     body {
       background-color: var(--dark-bg);
       color: white;
-      font-family: 'Press Start 2P', cursive;
+      font-family: 'Press Start 2P', cursive; /* font: oblique bold 120% cursive; */ /* font-family: "Lucida Console", "Courier New", monospace; */
+      font-size: 14px;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
@@ -30,7 +31,7 @@
 
     h1 {
       font-size: 2rem;
-      margin-bottom: 10px;
+      
     }
 
     .game-container {
@@ -163,7 +164,9 @@
     color: white;
   }
 
-    
+  input[type="radio"] {
+  accent-color: var(--neon-green); /* Cambiá a cualquier color */
+}
 
     .start-btn {
       background: transparent;
