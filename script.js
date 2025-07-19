@@ -7,10 +7,12 @@
         src: ['https://assets.codepen.io/21542/howler-sfx-neg.mp3']
       }),
       break: new Howl({
-        src: ['https://assets.codepen.io/21542/howler-shot.mp3']
+      src: ['https://actions.google.com/sounds/v1/impacts/crash.ogg'],
+      volume: 0.2
       }),
       win: new Howl({
-        src: ['https://assets.codepen.io/21542/howler-success.mp3']
+      src: ['https://actions.google.com/sounds/v1/cartoon/concussive_drum_hit.ogg'],
+      volume: 0.3
       })
     };
 
@@ -436,6 +438,7 @@ function breakBrick() {
   const bricks = wallElement.querySelectorAll('.brick:not(.broken)');
   if (bricks.length > 0) {
     const brickToBreak = bricks[0];
+    sounds.break.play();
     brickToBreak.style.animation = 'brickBreak 0.5s forwards';
     setTimeout(() => {
       brickToBreak.classList.add('broken');
