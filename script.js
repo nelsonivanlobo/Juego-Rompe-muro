@@ -18,244 +18,274 @@
 
     // Preguntas y respuestas por nivel (question/answer)
     const questions = {
-  basic: [
+      basic: [
+  {
+    question: "¿Qué es un algoritmo?",
+    options: [
+      "Una secuencia ordenada de pasos para resolver un problema",
+      "Un error de programación",
+      "Una base de datos"
+    ],
+    correctIndex: 0
+  },
     {
-      question: "¿Qué significa HTML?",
-      options: ["Hypertext markup language", "Hyperlink and Text Markup Language", "Hyper Tool Markup Language"],
+      question: "¿Cuál de estos es un lenguaje de programación?",
+      options: [
+        "HTML", 
+        "Python", 
+        "CSS"],
+      correctIndex: 1
+    },
+    {
+      question: "¿Qué símbolo se usa para comparar igualdad en la mayoría de lenguajes de programación?",
+      options: [
+        "=", 
+        "==", 
+        "==="],
+      correctIndex: 1
+    },
+    {
+      question: "¿Qué tipo de estructura es un 'array'?",
+      options: [
+        "Estructura de control", 
+        "Estructura de datos", 
+        "Estructura de bucle"],
+      correctIndex: 1
+    },
+    {
+  question: "¿Qué tipo de bucle ejecuta el código al menos una vez antes de comprobar la condición?",
+  options: [
+    "for", 
+    "while", 
+    "do...while"],
+  correctIndex: 2
+    },
+    {
+      question: "¿Qué significa la sigla SQL?",
+      options: [
+        "Structured Query Language", 
+        "System Question Language", 
+        "Software Query Logic"],
       correctIndex: 0
     },
     {
-      question: "¿Qué etiqueta se usa para crear un párrafo en HTML?",
-      options: ["pr", "point", "p"],
+    question: "¿Qué es un diagrama de flujo?",
+    options: [
+      "Una representación gráfica de un algoritmo o proceso",
+      "Un tipo de API para bases de datos",
+      "Una técnica para optimizar memoria"
+    ],
+    correctIndex: 0
+  },
+    {
+      question: "¿Cuál de estos NO es un lenguaje de programación?",
+      options: [
+        "C++", 
+        "Java", 
+        "MySQL"],
       correctIndex: 2
     },
-    {
-      question: "¿Qué símbolo se usa para comentarios en JavaScript?",
-      options: ["{}", "===", "//"],
-      correctIndex: 2
-    },
-    {
-      question: "¿Qué propiedad CSS se usa para cambiar el color de texto?",
-      options: ["change", "color", "background"],
+{
+      question: "¿Qué significa API?",
+      options: [
+        "Advanced Program Index",
+        "Application Programming Interface",  
+        "Automatic Process Integration"],
       correctIndex: 1
     },
     {
-      question: "¿Qué función se usa para imprimir en la consola en JavaScript?",
-      options: ["print.console()", "console.log()", "console.print()"],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué significa CSS?",
-      options: ["Creative Style Syntax", "Computer Style Sheets", "cascading style sheets"],
-      correctIndex: 2
-    },
-    {
-      question: "¿Qué tipo de dato es 42 en JavaScript?",
-      options: ["string", "boolean", "number"],
-      correctIndex: 2
-    },
-    {
-      question: "¿Con qué etiqueta se inserta una imagen en HTML?",
-      options: ["pic", "image", "img"],
-      correctIndex: 2
-    },
-    {
-      question: "¿Qué método convierte un objeto JavaScript a string JSON?",
-      options: ["JSON.parse()", "JSON.stringify()", "JSON.toString()"],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué operador se usa para comparar valor y tipo en JavaScript?",
-      options: ["==", "===", "="],
-      correctIndex: 1
+      question: "¿Qué operador se usa para asignar un valor a una variable?",
+      options: [
+        "=", 
+        "==", 
+        "=>"],
+      correctIndex: 0
     }
   ],
 
-  intermediate: [
+intermediate: [
+  {
+    question: "¿Qué es una función de callback?",
+    options: [
+      "Una función que retorna un valor booleano",
+      "Una función que se ejecuta al terminar el script",
+      "Una función que se pasa como argumento a otra función"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué es una API REST?",
+    options: [
+      "Una aplicación de streaming de datos",
+      "Un archivo de configuración de servidor",
+      "Una interfaz que usa HTTP para obtener datos o realizar operaciones"
+    ],
+    correctIndex: 2
+  },
+  {
+  question: "¿Qué significa IDE?",
+  options: [
+    "Integrated Development Environment", 
+    "Internal Data Execution", 
+    "Internet Development Engine"],
+  correctIndex: 0
+},
     {
-      question: "¿Qué es el DOM en JavaScript?",
+      question: "¿Qué significa 'debuggear'?",
       options: [
-        "Data Object Method",
-        "Document Object Model",
-        "Data Oriented Management"
-      ],
+        "Mejorar la velocidad del código", 
+        "Buscar y corregir errores", 
+        "Cambiar el diseño del programa"],
       correctIndex: 1
     },
-    {
-      question: "¿Qué es una función de callback?",
-      options: [
-        "Una función que retorna un valor booleano",
-        "Una función que se ejecuta al terminar el script",
-        "Una función que se pasa como argumento a otra función"
-      ],
-      correctIndex: 2
-    },
-    {
-      question: "¿Cuál es la diferencia principal entre var, let y const en JavaScript?",
-      options: [
-        "const permite reasignación y redeclaración, var y let no",
-        "var tiene ámbito global o de función, let y const tienen ámbito de bloque; const no permite reasignación",
-        "let permite reasignación pero no redeclaración; var no tiene ámbito de bloque"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es el hoisting en JavaScript?",
-      options: [
-        "El comportamiento de mover declaraciones al inicio de su ámbito",
-        "Una forma de ordenar funciones por prioridad",
-        "Una técnica para importar módulos externos"
-      ],
-      correctIndex: 0
-    },
-    {
-      question: "¿Qué es el event bubbling en JavaScript?",
-      options: [
-        "Un método para evitar que un evento se dispare",
-        "La propagación de eventos desde el elemento hijo hacia los padres",
-        "Un evento que solo se ejecuta una vez"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es una Promise en JavaScript?",
-      options: [
-        "Una función que garantiza ejecutar un código",
-        "Una API para guardar datos locales",
-        "Un objeto que representa la eventual finalización o fallo de una operación asíncrona"
-      ],
-      correctIndex: 2
-    },
-    {
-      question: "¿Qué significa AJAX?",
-      options: [
-        "Asynchronous JavaScript And XML",
-        "Automated JSON and XML",
-        "Application JavaScript API"
-      ],
-      correctIndex: 0
-    },
-    {
-      question: "¿Qué es el Local Storage en los navegadores?",
-      options: [
-        "Un sistema para ejecutar scripts locales",
-        "Un mecanismo para almacenar datos en el navegador de forma persistente",
-        "Una memoria temporal para datos volátiles"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es una API REST?",
-      options: [
-        "Una interfaz que usa HTTP para obtener datos o realizar operaciones",
-        "Una aplicación de streaming de datos",
-        "Un archivo de configuración de servidor"
-      ],
-      correctIndex: 0
-    },
-    {
-      question: "¿Qué significa el acrónimo SQL?",
-      options: [
-        "System Quality Logic",
-        "Storage Query Level",
-        "Structured Query Language"
-      ],
-      correctIndex: 2
-    }
+  {
+    question: "¿Qué es un framework?",
+    options: [
+      "Una colección de herramientas y librerías",
+      "Un tipo de base de datos",
+      "Un lenguaje de programación"
+    ],
+    correctIndex: 0
+  },
+  {
+  question: "¿Qué es un entorno de desarrollo?",
+  options: [
+    "Una red local para compartir datos",
+    "Un espacio donde el programador escribe, ejecuta y prueba su código",
+    "Un servidor en la nube"
   ],
+  correctIndex: 1
+},
+  {
+    question: "¿Qué es un servidor?",
+    options: [
+      "Un dispositivo o programa que provee servicios o datos a otros dispositivos",
+      "Un lenguaje de programación orientado a servicios",
+      "Un compilador de código"
+    ],
+    correctIndex: 0
+  },
+  {
+    question: "¿Qué es un tipo de dato primitivo?",
+    options: [
+      "Un tipo de dato definido por el usuario",
+      "Un tipo de dato utilizado solo en bases de datos",
+      "Un tipo de dato básico que no se puede descomponer en otros más simples"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué es un repositorio de código?",
+    options: [
+      "Un compilador en línea",
+      "Un lugar donde se almacenan y gestionan archivos de código fuente",
+      "Un archivo ejecutable"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué es la programación concurrente?",
+    options: [
+      "La ejecución de múltiples tareas al mismo tiempo para mejorar el rendimiento",
+      "La ejecución secuencial de funciones",
+      "Un tipo de compilación"
+    ],
+    correctIndex: 0
+  }
+],
 
-  advanced: [
-    {
-      question: "¿Qué es el patrón de diseño Singleton?",
-      options: [
-        "Permite crear múltiples instancias de una clase",
-        "Es un patrón que restringe la instanciación de una clase a una única instancia",
-        "Permite heredar múltiples clases"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es el event loop en JavaScript y cuál es su función principal?",
-      options: [
-        "Una función que bloquea la ejecución hasta que una tarea asíncrona termina",
-        "Un mecanismo que permite ejecutar código asincrónico manejando la cola de eventos y el call stack",
-        "Un tipo de bucle que itera sobre objetos en el DOM"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es la complejidad computacional Big O?",
-      options: [
-        "Un lenguaje de programación funcional",
-        "Una notación que describe el rendimiento o complejidad de un algoritmo",
-        "Una técnica de depuración en tiempo de ejecución"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es la programación funcional?",
-      options: [
-        "Un paradigma que trata la computación como evaluación de funciones matemáticas",
-        "Una técnica de programación orientada a objetos",
-        "Una forma de estructurar archivos CSS"
-      ],
-      correctIndex: 0
-    },
-    {
-      question: "¿Qué es un Web Worker en JavaScript?",
-      options: [
-        "Una librería para manipular el DOM",
-        "Un script que se ejecuta en segundo plano independiente de otros scripts",
-        "Una API para conectarse a bases de datos locales"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué son los Service Workers?",
-      options: [
-        "Scripts que el navegador ejecuta en segundo plano para manejar funciones sin conexión",
-        "Un conjunto de funciones para hacer animaciones CSS",
-        "Un sistema de versiones para archivos JS"
-      ],
-      correctIndex: 0
-    },
-    {
-      question: "¿Qué es WebAssembly (WASM)?",
-      options: [
-        "Una hoja de estilo para JavaScript",
-        "Un formato de código binario para ejecutar código de alto rendimiento en navegadores",
-        "Una API para manejo de cookies"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es la inyección de dependencias?",
-      options: [
-        "Una técnica para añadir archivos CSS dinámicamente",
-        "Un patrón de diseño que implementa inversión de control para resolver dependencias",
-        "Un método de autenticación entre servicios"
-      ],
-      correctIndex: 1
-    },
-    {
-      question: "¿Qué es GraphQL?",
-      options: [
-        "Un lenguaje de consulta para APIs que permite a los clientes solicitar exactamente los datos que necesitan",
-        "Un lenguaje para diseñar interfaces gráficas",
-        "Una librería para manipulación de gráficos SVG"
-      ],
-      correctIndex: 0
-    },
-    {
-      question: "¿Qué es la arquitectura de microservicios?",
-      options: [
-        "Un tipo de base de datos relacional",
-        "Un enfoque para desarrollar aplicaciones como conjunto de pequeños servicios independientes",
-        "Una herramienta de diseño gráfico en línea"
-      ],
-      correctIndex: 1
-    }
-  ]
+advanced: [
+{
+  question: "¿Qué es la arquitectura en capas?",
+  options: [
+    "Un patrón de diseño orientado a objetos",
+    "Una forma de organizar el código separándolo en niveles con responsabilidades específicas",
+    "Una técnica de optimización de algoritmos"
+  ],
+  correctIndex: 1
+},
+  {
+    question: "¿Qué es la complejidad computacional Big O?",
+    options: [
+      "Un lenguaje de programación funcional",
+      "Una notación que describe el rendimiento o complejidad de un algoritmo",
+      "Una técnica de depuración en tiempo de ejecución"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué es la programación funcional?",
+    options: [
+      "Una técnica de programación orientada a objetos",
+      "Una forma de estructurar archivos CSS",
+      "Un paradigma que trata la computación como evaluación de funciones matemáticas"
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué es la inyección de dependencias?",
+    options: [
+      "Una técnica para añadir archivos CSS dinámicamente",
+      "Un patrón de diseño que implementa inversión de control para resolver dependencias",
+      "Un método de autenticación entre servicios"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué es GraphQL?",
+    options: [
+      "Un lenguaje para diseñar interfaces gráficas",
+      "Una librería para manipulación de gráficos SVG",
+      "Un lenguaje de consulta para APIs que permite a los clientes solicitar exactamente los datos que necesitan",
+    ],
+    correctIndex: 2
+  },
+  {
+    question: "¿Qué es la arquitectura de microservicios?",
+    options: [
+      "Un tipo de base de datos relacional",
+      "Un enfoque para desarrollar aplicaciones como conjunto de pequeños servicios independientes",
+      "Una herramienta de diseño gráfico en línea"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué es WebAssembly (WASM)?",
+    options: [
+      "Una hoja de estilo para JavaScript",
+      "Un formato de código binario para ejecutar código de alto rendimiento en navegadores",
+      "Una API para manejo de cookies"
+    ],
+    correctIndex: 1
+  },
+  {
+    question: "¿Qué es un patrón de diseño?",
+    options: [
+      "Una solución reutilizable a un problema común en el desarrollo de software",
+      "Un tipo de base de datos",
+      "Una herramienta de diseño de interfaces"
+    ],
+    correctIndex: 0
+  },
+  {
+  question: "¿Qué es CI/CD?",
+  options: [
+    "Un método para optimizar consultas a bases de datos",
+    "Un protocolo de comunicación entre servidores",
+    "Prácticas de integración continua y entrega/despliegue continuo en desarrollo de software"
+  ],
+  correctIndex: 2
+},
+  {
+    question: "¿Qué es un sistema distribuido?",
+    options: [
+      "Un conjunto de computadoras que trabajan juntas como un solo sistema",
+      "Un solo servidor ejecutando múltiples tareas",
+      "Un algoritmo de búsqueda"
+    ],
+    correctIndex: 0
+  }
+]
 };
 
 // Crear estrellas en el fondo
